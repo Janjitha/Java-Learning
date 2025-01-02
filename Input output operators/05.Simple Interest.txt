@@ -11,10 +11,10 @@ OUTPUT FORMAT:
 Print the simple interest in float with 2 decimal places
 
 
-(p*n*r)/
-prin: 15,000
+Sample Input
+principle: 15,000
 years:2
-rate : 2.8
+rate: 2.8
 
 OUTPUT:-
 
