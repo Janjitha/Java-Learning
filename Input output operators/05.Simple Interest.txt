@@ -1,0 +1,46 @@
+5. Sara wished to build a new house but she didn't have a sufficient amount.
+So, she is planning to borrow some money from the bank on simple interest.
+When she is borrowing some money from the bank, she has to pay back the original amount accompanied by a certain amount of interest on that amount. She wants to find the interest for borrowed money within a certain period. Help her to find the simple interest.
+
+INPUT FORMAT:
+The first line containing an integer value denoting the borrowed amount(principal amount)
+The second line containing an integer value denoting the period in years
+The third line containing the float value denoting the rate of interet
+
+OUTPUT FORMAT:
+Print the simple interest in float with 2 decimal places
+
+
+(p*n*r)/
+prin: 15,000
+years:2
+rate : 2.8
+
+OUTPUT:-
+
+package placement01;
+
+import java.util.Scanner;
+
+public class Simpleinterest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Principle:");
+		int p = sc.nextInt();
+		System.out.println("Period of years:");
+		int n = sc.nextInt();
+		System.out.println("Rate of interest:");
+		float r = sc.nextFloat();
+		
+		float result = (p*n*r)/100;
+		System.out.printf("%.2f",result);
+		
+
+	}
+
+}
+
+
+TECHNOSS youtuble channel
