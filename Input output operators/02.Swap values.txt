@@ -9,7 +9,7 @@ The output will be integers (swapped values)
 
 OUTPUT:-
 
-package placement01;
+package Main;
 
 import java.util.Scanner;
 
