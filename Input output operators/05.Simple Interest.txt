@@ -18,7 +18,7 @@ rate: 2.8
 
 OUTPUT:-
 
-package placement01;
+package Main;
 
 import java.util.Scanner;
 
@@ -36,11 +36,9 @@ public class Simpleinterest {
 		
 		float result = (p*n*r)/100;
 		System.out.printf("%.2f",result);
-		
-
 	}
 
 }
 
 
-TECHNOSS youtuble channel
+
