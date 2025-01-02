@@ -27,7 +27,7 @@ Sample input values
 
 OUTPUT:-
 
-package placement01;
+package Main;
 
 import java.util.Scanner;
 
