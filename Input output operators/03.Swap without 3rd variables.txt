@@ -12,7 +12,7 @@ a=a-b
 
 OUTPUT:-
 
-package placement01;
+package Main;
 
 import java.util.Scanner;
 
