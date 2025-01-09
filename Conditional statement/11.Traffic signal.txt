@@ -1,0 +1,41 @@
+Traffic Signal
+
+We are driving down the street and see a green traffic light ahead. Because we know precisely the pattern of this traffic light. we know exactly how long we have before it will turn red. We wish to compute whether we will pass the traffic light before it turns red at out current speed. Write a program to check whether we will beat the light or not with the current speed.
+
+INPUT FORMAT:
+The first input containing the floating point number which denotes the current speed in miles per hour.
+The second input containing the floating point number which denotes the distance to the light in miles.
+The third input containing the floating point number which denotes the time until it turns red in seconds.
+
+SAMPLE INPUT:
+59.99
+1
+60
+
+50.6
+2
+60
+
+OUTPUT:-
+
+import java.util.Scanner;
+public class TrafficSignal_11 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter speed , distance , second :");
+		float speed = sc.nextFloat();
+		float distance = sc.nextFloat();
+		float second = sc.nextFloat();
+		double xyz = speed/3600.0;
+		double abc = distance/xyz;
+		if(abc < second) {
+			System.out.println("Light can be beaten");
+		}
+		else {
+			System.out.println("Light can't be beaten");
+		}
+	}
+}
+
+

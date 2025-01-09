@@ -1,0 +1,66 @@
+Jeevitha just started work as a programming trainer for UIT'S placement cell. She is paid Rs.100 an hour, with a few exceptions.
+She earns an extra Rs.15 an hour for any part of a day where she works more than 8 hours,and an extra Rs.25 an hour for hours beyond 40 in any one week. 
+also, she earns a 25% bonus for working on Saturday and a 50% bonus for working on sunday.  The bonuses for Saturday and sunday are computed 
+based on the hours worked those days; they are not used to calculate any bonus for working more than 40 hours in a week.  
+You'll be given the number of hours Jeevitha worked on each day in a week(Sunday, Monday,..., Saturday),and you need to compute her salary for the week.
+
+INPUT FORMAT:
+
+Input consists of 7 integers less than or equal to 24 on separate lines
+
+SAMPLE TEST CASES:
+
+0
+8
+8
+8
+10
+6
+0
+Output=4030
+
+OUTPUT:-
+
+import java.util.Scanner;
+public class ProgTrainerSalary_12 {
+	public static void main(String[] args) {
+		        Scanner scanner = new Scanner(System.in);
+		        System.out.println("Enter the hours worked on each day (Sunday to Saturday):");
+		        int[] hours = new int[7];
+		        for (int i = 0; i < 7; i++) {
+		            hours[i] = scanner.nextInt();
+		        }
+		        // Constants
+		        int regularRate = 100;
+		        int extraRate = 15;
+		        int overtimeRate = 25;
+		        // Bonus rates
+		        double saturdayBonus = 0.25;
+		        double sundayBonus = 0.50;
+		        // Calculate total salary
+		        int totalHours = 0;
+		        double totalSalary = 0;
+		        for (int i = 0; i < 7; i++) {
+		            int dailyHours = hours[i];
+		            totalHours += dailyHours;
+		            if (i == 0) { // Sunday
+		                totalSalary += dailyHours * regularRate * (1 + sundayBonus);
+		            } else if (i == 6) { // Saturday
+		                totalSalary += dailyHours * regularRate * (1 + saturdayBonus);
+		            } else {
+		                totalSalary += dailyHours * regularRate;
+		                if (dailyHours > 8) {
+		                    totalSalary += (dailyHours - 8) * extraRate;
+		                }
+		            }
+		        }
+		        // Add overtime pay for hours beyond 40 in a week
+		        if (totalHours > 40) {
+		            totalSalary += (totalHours - 40) * overtimeRate;
+		        }
+		        System.out.printf("Jeevitha's total salary for the week is: Rs.%.2f%n", totalSalary);
+		        scanner.close();
+		    }
+		}
+
+

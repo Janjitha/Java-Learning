@@ -1,0 +1,38 @@
+Age Detector
+
+Ask a user for their birth year encoded as two digits (like "62") and for the current year two digits(like "99"). Write a program to find the users current age in years.
+
+INPUT FORMAT:
+Input consists of 2 integers
+The first integr corresponds to the last 2 digits of the birth year
+The Second integer corresponds to the last 2 digits of the current year
+
+OUTPUT FORMAT:
+Print the users current age.
+
+SAMPLE INPUT:
+
+05
+25
+
+OUTPUT:-
+
+import java.util.Scanner;
+public class AgeDetector_09 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Birth year:");
+		int birth = sc.nextInt();
+		System.out.println("Enter Current year:");
+		int current = sc.nextInt();
+		int century = (100-birth) + current;
+		int year = current - birth;
+		if(birth>current) {
+			System.out.println(century);
+		}
+		else {
+			System.out.println(year);
+		}
+	}
+}
