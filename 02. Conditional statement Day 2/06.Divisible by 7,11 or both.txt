@@ -1,0 +1,26 @@
+6. Check if a number is divisible by 7,11 or both.
+
+OUTPUT:-
+
+import java.util.Scanner;
+public class Divisibleby7_11_both_06 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        System.out.println("Enter an integer:");
+        int a = sc.nextInt();
+        if(a%7==0) {
+        	System.out.println("Divisible by 7");
+        }
+        else if (a%11==0) {
+        	System.out.println("Divisible by 11");
+        }
+        else if (a%7==0 && a%11==0) {
+        	System.out.println("Divisible by both 7 and 11");
+        }
+        else {
+        	System.out.println("Not Divisible");
+        }
+   }
+
+}

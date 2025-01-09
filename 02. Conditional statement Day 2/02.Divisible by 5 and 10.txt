@@ -1,0 +1,21 @@
+2. Check if number is divisible by 5 and 10
+
+OUTPUT:-
+
+package placement01;
+import java.util.Scanner;
+public class Divisibleby5and10 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the number:");
+		int a = in.nextInt();
+		if(a%5==0 && a%10==0) {
+			System.out.println("Divisible by 5 and 10");
+		}
+		else {
+			System.out.println("Not divisible");
+		}
+	}
+
+}

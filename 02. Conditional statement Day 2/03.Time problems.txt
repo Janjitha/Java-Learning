@@ -1,0 +1,34 @@
+I) Check whether the given time is morning or afternoon or evening or night.
+
+OUTPUT:-
+
+import java.util.Scanner;
+public class Timing_03_i {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the Time:");
+		int a = in.nextInt();
+		if(a>=6 && a<12) {
+			System.out.println("Morning");
+		}
+		else if(a>=12 && a<=16) {
+			System.out.println("Afternoon");
+		}
+		else if(a>16 && a<=19) {
+			System.out.println("Evening");
+		}
+		else if(a>=20 && a<=24 || a>=1 && a<=5) {
+			System.out.println("Night");
+		}
+		else {
+			System.out.println("Invalid input");
+		}
+	}
+
+}
+
+II) Denote the time with the "am" or "pm" 
+
+OUTPUT:-
+
