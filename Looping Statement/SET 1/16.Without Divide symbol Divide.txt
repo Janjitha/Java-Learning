@@ -1,0 +1,23 @@
+16. Divide two numbers without using divide symbol
+
+OUTPUT:-
+
+public class Divide_without_divide_symbol_16 {
+
+	public static void main(String[] args) {
+		        int a = -10, b = 2, c = 0, sign = 1;		     
+		        if (a < 0) {
+		            a = -a;
+		            sign = -sign;
+		        }		        
+		        if (b < 0) {
+		            b = -b;
+		            sign = -sign;
+		        }		        
+		        for (int i = 0; a >= b; i++) {
+		            a -= b;  
+		            c++;
+		        }		        
+		        System.out.println(sign * c);
+		    }
+		}

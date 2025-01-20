@@ -1,0 +1,24 @@
+11. Write a program to check whether the given number is strong.
+
+
+OUTPUT:-
+
+import java.util.Scanner;
+public class Reverseinteger_11 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int temp = n;
+		int rem;
+		int s=0;
+		while(n>0) {
+			rem = n%10;
+			s=s*10+rem;
+			n=n/10;
+		}
+		System.out.println(s);
+
+	}
+
+}
