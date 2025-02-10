@@ -1,0 +1,28 @@
+7. Check whether the given character is alphabet or number, if it an alphabet, check whether it is vowel or not.
+
+OUPUT:-
+
+import java.util.Scanner;
+public class Alphabetornumber_07 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Character:");
+		char ch = sc.next().charAt(0);
+		ch = Character.toLowerCase(ch);
+		//if(Character.isAlphabetic(ch))
+		if(ch>='a' && ch<= 'z') {
+			System.out.println(ch + " is alphabet");
+			if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u') {
+				System.out.println(ch + " is vowel");
+			}
+			else {
+				System.out.println("Not vowel");
+			}
+		}
+		else {
+			System.out.println("Number");
+		}
+	}
+
+}
