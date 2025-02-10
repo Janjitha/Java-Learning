@@ -1,0 +1,59 @@
+4. Sheela has three things in her bag. She wants to compute the area of 3 things but 3 things are in different shapes.
+The three things are in a square shape, rectangular shape, and circular shape respectively.
+Write a program to help Sheela to calculate the area of different shapes.
+
+INPUT FORMAT:
+First input: a side of the square in integer
+Second input: length of a rectange in integer 
+Third input: breadth of a rectangle in integer
+Fourth input: radius of a circle in float
+
+OUTPUT FORMAT:
+The first output should be the area of a square in integer
+The second output should be the area of a rectangle in integer
+The third output should be the area of circle in float with 2 decimal points
+
+Sample input values
+5
+5
+4
+2.0
+Sample input values
+2
+3
+6
+5.0
+
+
+OUTPUT:-
+
+package placement01;
+
+import java.util.Scanner;
+
+public class Areasofdifferentshapes {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Side of the square:");
+		int side = sc.nextInt();
+		System.out.println("Length of a rectangle:");
+		int length = sc.nextInt();
+		System.out.println("Breadth of a rectangle:");
+		int breadth = sc.nextInt();
+		System.out.println("Radius of circle:");
+		float radius = sc.nextFloat();
+		
+		int a=side*side;
+		System.out.println("Area of square:" +a);
+		int b=length * breadth;
+		System.out.println("Area of rectangle:" +b);
+		double r=(3.14*radius*radius)*100;
+		System.out.printf("%.02f",Math.floor(r)*0.01);
+		
+	}
+
+}
+
+
