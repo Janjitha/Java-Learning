@@ -1,0 +1,25 @@
+Write a program to find which digit is even or odd
+
+CODE:
+
+import java.util.*;
+public class DigitEvenorOdd_08 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        String num = scanner.next();
+        for (char ch : num.toCharArray()) 
+            System.out.println(ch + (ch % 2 == 0 ? " is Even" : " is Odd"));
+	}
+}
+
+INPUT:
+Enter a number: 5642
+
+OUTPUT:
+5 is Odd
+6 is Even
+4 is Even
+2 is Even
+
+ 

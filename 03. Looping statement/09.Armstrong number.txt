@@ -1,0 +1,42 @@
+09. Write a program to check whether the given number is Armstrong.
+ 
+OUTPUT:-
+
+import java.util.Scanner;
+public class Armstrong_09 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number:");
+		int a = sc.nextInt();
+		int rem;
+		int sum=0;
+		int count=0;
+		int temp=a;
+		for(int i = a;i>0;i=i/10) {
+			count++;
+		}
+		while(a<0) {
+			rem=a%10;
+			sum=sum + (int)Math.pow(rem, count);
+			a=a/10;
+		}
+		if(a==temp) {
+			System.out.println("Armstrong");
+		}
+		else {
+			System.out.println("Not Armstrong");
+		}
+		
+	}
+
+}
+
+OUTPUT FOR THE CODE:
+Enter the number:
+153
+Armstrong
+
+Enter the number:
+150
+Not Armstrong

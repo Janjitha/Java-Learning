@@ -1,0 +1,21 @@
+3. Print the multiplication table of 5 using for loop.
+
+OUTPUT:-
+
+import java.util.Scanner;
+public class Tableof5_03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter the number: ");
+		int n = in.nextInt();
+		System.out.println("Enter the multiple:");
+		int a = in.nextInt();
+		for (int i = 1;i <=n;i++) {
+			System.out.println(i + " x " + a + " = " + i*a);
+		}
+
+	}
+
+}

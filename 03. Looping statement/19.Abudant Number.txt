@@ -1,0 +1,27 @@
+3.Check whether the given number is Abudant number or not.
+
+OUTPUT:-
+
+import java.util.Scanner;
+public class Abudantnumber_03 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number:");
+		int a = sc.nextInt();
+		int sum=0;
+		int temp = a;
+		for(int i = 1 ; i<a;i++) {
+			if(a%i==0) {
+				sum=sum+i;
+			}
+		}
+		if(sum>temp) {
+			System.out.println("Abudant Number");
+		}
+		else {
+			System.out.println("Not Abudant Number");
+		}
+	}
+
+}

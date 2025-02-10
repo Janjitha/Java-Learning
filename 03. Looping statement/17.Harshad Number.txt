@@ -1,0 +1,42 @@
+17. Check the given number is Harshad Number or not.
+
+CODE:-
+
+import java.util.Scanner;
+public class Harhadnumber_01 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number:");
+		int a = sc.nextInt();
+		int rem;
+		int digit=0;
+		int temp=a;
+		while(a>0){
+			 rem=a%10;
+			 digit=digit+rem;
+			 a=a/10;
+		}
+		if(temp%digit==0) {
+			System.out.println("Harshad Number");
+		}
+		else {
+			System.out.println("Not Harshad Number");
+		}
+		
+	}
+}
+
+1.INPUT :
+Enter number:
+21
+
+OUTPUT :
+Harshad Number
+
+2.INPUT :
+Enter number:
+15
+
+OUTPUT :
+Not Harshad Number

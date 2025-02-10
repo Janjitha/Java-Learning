@@ -1,0 +1,42 @@
+8. Write a program to check whether the given number is strong.
+
+SAMPLE INPUT:
+145
+
+OUTPUT:-
+
+import java.util.Scanner;
+public class Strongnumber_08 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number:");
+		int n = sc.nextInt();
+		int temp=n;
+		int rem;
+		int sum = 0;
+		while(n>0) {
+			rem = n % 10;
+			int i = 1;
+			int fact = 1;
+			while(i<=rem) {
+				fact = fact *i;
+				i++;
+			}
+			sum=sum+fact;
+			n=n/10;
+		}
+		if(sum == temp) {
+			System.out.println(sum + " is Strong");
+		}
+		else {
+			System.out.println("Not Strong");
+		}
+	}
+
+}
+
+OUTPUT FOR THE CODE:
+Enter the number:
+145
+145 is Strong

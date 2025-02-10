@@ -1,0 +1,28 @@
+13. Write a program to check whether the given number is a trendy number or not a number is said to be a trendy number of it has 3 digits and the middle digits is divisible by 3,
+
+OUTPUT:-
+
+import java.util.Scanner;
+public class Trendynumber_13 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		if(a>99 && a<=999) {
+			int rem=(a%100)/10;
+			if(rem%3==0) {
+				System.out.println("Trendy number");
+			}
+			else {
+				System.out.println("Not a trendy number");
+			}
+		}
+
+	}
+
+}
+
+OUTPUT FOR THE CODE:
+555
+Not a trendy number

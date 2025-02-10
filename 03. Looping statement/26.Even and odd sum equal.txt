@@ -1,0 +1,42 @@
+1. In the university examination conducted during the past 5 years,the toppers register number where 7126,82417912,7680 abd 6657. In all these register number listed here, the sum of odd digit is equal to the sum of even digit in the number.  He turned the numbers that satisfy his property as a toppers number.Write a program to find whether the given number is probable topper number or not.
+
+INPUT ROMAT:
+
+Consists of integer
+
+OUTPUT FORMAT:
+
+Print Yes or No
+
+OUTPUT:-
+
+import java.util.Scanner;
+
+public class Evenoddequal_01 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner (System.in);
+		int n=sc.nextInt();
+		int sum=0;
+		int sum1=0;
+		while(n>0) {
+			int rem=n%10;
+			if(rem%2==0) {
+				sum=sum+rem;
+			}
+			else {
+				sum1=sum1+rem;
+			}
+			n=n/10;
+		}
+		if(sum==sum1) {
+			System.out.println("yes");
+		}
+		else {
+			System.out.println("no");
+		}
+
+	}
+
+}

@@ -1,0 +1,29 @@
+10. Write a program to check whether the given number is Automorphic or not.
+
+
+OUTPUT:-
+
+import java.util.Scanner;
+public class Automorphic_10 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number:");
+		int a = sc.nextInt();
+		int b = a*a;
+		int f = 1;
+		while(a>0) {
+			if(a%10!=b%10) {
+				f = 0;
+				System.out.println("Not Automorphic");
+				break;
+			}
+			a=a/10;
+			b=b/10;
+		}
+		if(f==1) {
+			System.out.println("Automorphic");
+		}
+	}
+
+}

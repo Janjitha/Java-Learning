@@ -1,0 +1,38 @@
+3. Consider two integers from m to n. Calculate the sum of the cubes of 2 integers from m to n. If m is greater than m return 0 or print the proper message.
+
+SAMPLE TEST CASE:
+1->m=2
+   n=4
+2->m=3
+   n=3
+3->m=7
+   n=2
+
+CODE:
+
+import java.util.Scanner;
+public class SumOfCubes_03 {
+	public static void main(String[] args) {
+		  Scanner scanner = new Scanner(System.in);
+	        System.out.print("Enter m: ");
+	        int m = scanner.nextInt();
+	        System.out.print("Enter n: ");
+	        int n = scanner.nextInt();
+	        if (m > n) {
+	            System.out.println("Invalid range. m should be less than or equal to n.");
+	        } else {
+	            int sum = 0;
+	            for (int i = m; i <= n; i++) {
+	                sum += i * i * i;
+	            }
+	            System.out.println("Sum of cubes: " + sum);
+	        }
+	}
+}
+
+INPUT:
+Enter m: 2
+Enter n: 4
+
+OUTPUT:
+Sum of cubes: 99

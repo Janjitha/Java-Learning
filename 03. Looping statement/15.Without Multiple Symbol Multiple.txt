@@ -1,0 +1,16 @@
+15. Multiply 2 given number without using multiplication symbol.
+
+OUTPUT:-
+
+public class Multiplewithoutmultiplesymbol_15 {
+
+	public static void main(String[] args) {
+		int a=5;
+		int b=10;
+		int sum=0;
+		for(int i=0;i<b;i++) {
+			sum=sum+a;
+        }
+		System.out.println(sum);
+	} 
+}

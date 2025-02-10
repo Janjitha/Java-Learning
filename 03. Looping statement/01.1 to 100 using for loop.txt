@@ -1,0 +1,17 @@
+1. Print the numbers from 1 to 100 using for loop
+
+OUTPUT:-
+
+import java.util.Scanner;
+public class Forloop_1_to_100_01 {
+		public static void main(String[] args) {
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Enter ending number:");
+			int a = sc.nextInt();
+			for (int i = 1;i<=a;i++) {
+				System.out.println(i);
+			}
+
+		}
+
+	}

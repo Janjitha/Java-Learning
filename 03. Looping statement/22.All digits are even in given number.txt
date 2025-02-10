@@ -1,0 +1,28 @@
+6. Write a program to check whether all the digits are even in given numbers?
+
+CODE:
+
+import java.util.Scanner;
+public class AllDigitsEven_06 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n =sc.nextInt();
+		while(n>0) {
+			int rem=n%10;
+			if(rem%2!=0) {
+				System.out.println("Odd");
+				break;
+			}
+			n=n/10;
+		}
+		if(n==0) {
+				System.out.println("Even");
+		}
+	}
+}
+
+INPUT:
+6482
+
+OUTPUT:
+Even

@@ -1,0 +1,26 @@
+Write a program to find the prime digit
+
+CODE:
+
+import java.util.Scanner;
+public class find_prime_digit_09 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = Math.abs(scanner.nextInt());
+        while (num > 0) {
+            int digit = num % 10;
+            if (digit == 2 || digit == 3 || digit == 5 || digit == 7) 
+                System.out.println(digit + " is Prime");
+            num /= 10;
+        }
+	}
+}
+
+INPUT:
+Enter a number: 5379
+
+OUTPUT:
+7 is Prime
+3 is Prime
+5 is Prime

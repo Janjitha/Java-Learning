@@ -1,0 +1,42 @@
+02. Check whether the given number is Friendlu pair or not.
+
+CODE:-
+
+import java.util.Scanner;
+public class Friendlypair_02 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int suma=0;
+		int sumb=0;
+		//int tempa = a;
+		//int tempb=b;
+		for(int i = 1 ; i<a;i++) {
+			if(a%i==0) {
+				suma=suma+i;
+			}
+		}
+		for(int j = 1 ; j<b;j++) {
+			if(b%j==0) {
+				sumb=sumb+j;
+			}
+		}
+		if(suma%a==sumb%b) {
+			System.out.println("Friendly Pair");
+		}
+		else {
+			System.out.println("Not Friendly Pair");
+		}
+
+	}
+
+}
+
+INPUT:
+6
+28
+
+OUTPUT:
+Friendly Pair

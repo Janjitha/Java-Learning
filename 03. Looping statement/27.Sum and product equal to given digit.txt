@@ -1,0 +1,31 @@
+2. Assume that m and n are 2 digit number. A two digit number is said to be a special number if the sum of digits and the product of the digit is equal to the numbers itself
+For EXAMPLE, 19=(1+9=10)+(1*9=9)=19
+
+OUTPUT:-
+
+import java.util.Scanner;
+
+public class SumProductDigit_02 {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		int m=sc.nextInt();
+		int sum=0;
+		int product=1;
+		int t=m;
+		while(m>0) {
+			int rem=m%10;
+			 sum=sum+rem;
+			 product=product*rem;
+			 m=m/10;
+		}
+		int result=sum+product;
+		if(result==t) {
+			System.out.println("Special Number");
+		}
+		else {
+			System.out.println("not");
+		}
+	}
+}
