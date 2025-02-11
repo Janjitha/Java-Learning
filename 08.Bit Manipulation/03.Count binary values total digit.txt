@@ -1,0 +1,29 @@
+3. Write a program to count the binary number and print the integer of binary number
+
+CODE:
+
+import java.util.*;
+public class count_binary_values_digit_03 {
+	public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        // Convert integer to binary and count digits
+	        System.out.print("Enter an integer: ");
+	        int n = sc.nextInt();
+	        String binary = Integer.toBinaryString(n);
+	        System.out.println("Binary representation: " + binary);
+	        System.out.println("Number of binary digits: " + binary.length());
+	        // Convert binary to integer
+	        System.out.print("Enter a binary number: ");
+	        String binInput = sc.next();
+	        int decimal = Integer.parseInt(binInput, 2);
+	        System.out.println("Integer representation: " + decimal);
+	    }
+	}
+
+OUTPUT:
+Enter an integer: 7
+Binary representation: 111
+Number of binary digits: 3
+Enter a binary number: 1010
+Integer representation: 10
+

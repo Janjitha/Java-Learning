@@ -1,0 +1,41 @@
+I. Checking if a number is odd or even
+
+You can check whether a number is odd or even using the bitwise AND operator (&).
+
+Even number: The least significant bit (LSB) is 0.
+Odd number: The least significant bit (LSB) is 1.
+
+CODE:
+
+public class BitManipulation {
+    public static void main(String[] args) {
+        int num = 5;
+        if ((num & 1) == 0) {
+            System.out.println(num + " is even");
+        } else {
+            System.out.println(num + " is odd");
+        }
+    }
+}
+
+OUTPUT:
+5 is odd
+
+II. Check whether the switch if on or off (on=1 / off=0)
+
+CODE:
+public class BitManipulation {
+    public static void main(String[] args) {
+        int num = 5;
+        if ((num & 1) == 1 ) {
+            System.out.println("Switch is ON");
+        } else {
+            System.out.println("Switch is OFF");
+        }
+    }
+}
+
+OUTPUT:
+Switch is ON
+
+
