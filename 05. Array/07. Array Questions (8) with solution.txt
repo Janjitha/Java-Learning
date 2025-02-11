@@ -42,9 +42,10 @@ Enter Position 1 & Position 2 : 0 2
 OUTPUT:
 Swapped Elements : 3 2 1 4 5 
 
-======================================================
+==================================================================================================================================================================
   
-  2.Write a program to complete the function replace_ele() , which receives number of elements and array ,  do replace every element in   the array with the sum of  every other element and return the same array. Note:Dont use extra arrays
+  2.Write a program to complete the function replace_ele() , which receives number of elements and array ,  do replace every element in   
+the array with the sum of  every other element and return the same array. Note:Dont use extra arrays
 
 CODE:
 
@@ -80,9 +81,10 @@ INPUT:
 OUTPUT:
 14 13 12 11 10 
 
-===========================================================
+=======================================================================================================================================================================
 
-  3. Write a program to complete the function sum_of_right_side_ele(), which receives number of elements and array ,  do replace every element in the array with the sum of  its right side elements and return the same array. Note:Dont use extra arrays
+  3. Write a program to complete the function sum_of_right_side_ele(), which receives number of elements and array ,  
+do replace every element in the array with the sum of  its right side elements and return the same array. Note:Dont use extra arrays
 
 CODE:
 
@@ -120,9 +122,10 @@ INPUT:
 OUTPUT:
 14 12 9 5 0 
 
-==================================================================
+==============================================================================================================================================================================
 
-  4. Write a program to complete the function sum_of_left_side_ele(), which receives number of elements and array ,  do replace every        element in the array with the sum of  its left side elements and return the same array. Note:Dont use extra arrays
+  4. Write a program to complete the function sum_of_left_side_ele(), which receives number of elements and array ,  do replace every       
+element in the array with the sum of  its left side elements and return the same array. Note:Dont use extra arrays
 
 CODE:
 
@@ -157,9 +160,10 @@ INPUT:
 OUTPUT:
 0 1 3 6 10 
 
-========================================================================
+============================================================================================================================================================================
 
-    5.Given the size of array and array values to function Array_multiplication() , do complete the function by replacing every element by the product of previous and next element for all index.
+  5.Given the size of array and array values to function Array_multiplication() , do complete the function by replacing every 
+element by the product of previous and next element for all index.
 
 CODE:
 
@@ -203,7 +207,7 @@ Enter 5 elements:
 OUTPUT:
 2 3 8 15 20
 
-====================================================================
+================================================================================================================================================================================
 
     6.Given the size of array and array values to function arr_reverse(), write a code to reverse the given array.
 
@@ -248,7 +252,7 @@ Enter the elements of the array:
 OUTPUT:
 Reversed array: 5 4 3 2 1 
 
-====================================================================
+================================================================================================================================================================================
 
      7. Complete the function insert_element()  to insert the given element at given position and display the updated array. 
 
@@ -294,7 +298,10 @@ Enter the position to insert (0-based index): 3
 OUTPUT:
 Updated Array: 1 2 3 50 4 5 
 
-    8.Complete the function delete_element(), which deletes the element at the given position or print "deletion not possible" if given   position is out of Bound.
+==================================================================================================================================================================
+
+    8.Complete the function delete_element(), which deletes the element at the given position or print "deletion not possible" if given  
+position is out of Bound.
 
 CODE:-
 import java.util.Scanner;
