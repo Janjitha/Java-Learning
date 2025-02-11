@@ -1,0 +1,31 @@
+5. Write a program to find the duplicate element from the given array?
+
+CODE:
+
+import java.util.Scanner;
+public class Array_Duplicate_03 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size:");
+		int n = sc.nextInt();
+		int a[]=new int[n];
+		System.out.println("Enter the elements:");
+		for(int i =0;i<n;i++) {
+			a[i]=sc.nextInt();
+		}
+		for(int i=0;i<n;i++) {
+			for(int j=i+1;j<n;j++) {
+				if(a[i]==a[j]) {
+				System.out.println(a[j]+" is duplicate");
+				}
+			}
+		}
+	}
+}
+
+OUTPUT:
+Enter the size:
+5
+Enter the elements:
+1 2 2 3 5
+2 is duplicate
