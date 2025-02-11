@@ -1,0 +1,45 @@
+Write a program to check whether the given array is compatible or not?
+
+CONDITIONS:
+
+1. Size of the array should be same.
+2. 1st array values should be greater than 2nd array
+
+CODE:
+
+import java.util.Scanner;
+public class Array_Compatible_04 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the size of n and m : ");
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		if (n != m) {
+            System.out.println("Not Compatible");
+            return;
+        }
+		int a[]= new int[n];
+		int b[]=new int[m];
+		System.out.print("n elements : ");
+		for(int i =0;i<n;i++) {
+			a[i]=sc.nextInt();
+		}
+		System.out.print("m elements : ");
+		for(int i =0;i<m;i++) {
+			b[i]=sc.nextInt();
+		}
+		for (int i = 0; i < n; i++) {
+            if (a[i] < b[i]) {
+                System.out.println("Not Compatible");
+                return;
+            }
+        }
+        System.out.println("Compatible");
+    }
+}
+
+OUTPUT:
+Enter the size of n and m : 5 5
+n elements : 4 5 6 8 7
+m elements : 1 2 3 1 2
+Compatible

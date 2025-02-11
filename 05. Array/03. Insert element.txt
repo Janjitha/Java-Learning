@@ -1,0 +1,55 @@
+1. Write a program to insert an element in an array in the given position using one array.
+
+SAMPLE INPUT:
+
+Size = 5
+Array = 1,2,3,4,5
+Position & element = 4,10
+
+OUTPUT:
+
+import java.util.Scanner;
+public class Array_Insert_01 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Size:");
+		int n = sc.nextInt();
+		int a[] = new int[n];
+		System.out.println("Enter the elements:");
+		for(int i =0;i<n;i++) {
+			
+			a[i]=sc.nextInt();
+		}
+		System.out.println("Enter the Position:");
+		int pos=sc.nextInt();
+		int element;
+		int i;
+		if(pos>n) {
+			System.out.println("Invalid");
+		}
+		else {
+			System.out.println("Enter the element to insert:");
+			element=sc.nextInt();
+			i=0;
+			while(i<n) {
+				if(i==pos-1){
+					System.out.printf("%d %d ",element,a[i]);
+				}else {
+					System.out.print(a[i]+" ");
+				}
+				i++;
+		}
+		}
+	}
+}
+
+OUTPUT:
+Enter the Size:
+5
+Enter the elements:
+1 2 3 4 5
+Enter the Position:
+2
+Enter the element to insert:
+21
+1 21 2 3 4 5 
