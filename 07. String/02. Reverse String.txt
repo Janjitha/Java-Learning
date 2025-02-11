@@ -1,0 +1,21 @@
+2.Write a program to reverse the String from the given string?
+
+CODE:
+
+import java.util.Scanner;
+public class String_Reverse_02 {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the String : ");
+        String s=sc.nextLine();
+        String k="";
+        for(int i=s.length()-1;i>=0;i--) {
+        	k=k+s.charAt(i);
+        }
+        System.out.print("Reveresed String : "+k);
+	}
+}
+
+OUTPUT:
+Enter the String : khokho
+Reveresed String : ohkohk

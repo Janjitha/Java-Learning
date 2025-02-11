@@ -1,0 +1,27 @@
+13. Write a program to reverse the word in the given string?
+
+CODE:
+
+import java.util.Scanner;
+public class String_Reverse_Word_08 {
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		System.out.print("Enter the String : ");
+		String s = sc.nextLine();
+		String result=new String(" ");
+		String arr[]=s.split(" ");
+		String rev="";
+		for(String i:arr) {
+			for(int j=i.length()-1;j>=0;j--) {
+				char ch=i.charAt(j);
+				rev+=ch;
+			}
+			rev+=" ";
+		}
+		System.out.print("The reversed words are : "+rev);
+	}
+}
+
+OUTPUT:
+Enter the String : The word is perfect
+The reversed words are : ehT drow si tcefrep 

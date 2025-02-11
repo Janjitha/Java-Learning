@@ -1,0 +1,21 @@
+1.Write a program to Copy the String from the given string?
+
+CODE:
+
+import java.util.Scanner;
+public class String_Copy_01 {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the String : ");
+		String n=sc.nextLine();
+		String m="";
+         for(int i=0;i<n.length();i++) {
+        	 m=m+n.charAt(i);
+         }
+         System.out.print("Copied String : "+m);
+	}
+}
+
+OUTPUT:
+Enter the String : Welcome home
+Copied String : Welcome home

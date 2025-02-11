@@ -1,0 +1,31 @@
+12. Find the duplicate characters in the string and with their count?
+
+CODE:
+
+import java.util.Scanner;
+public class String_DuplicateChar_07 {
+	public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the string : ");
+        String s= sc.nextLine();
+        System.out.println("Duplicate charcters ");
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            int count = 0;            
+            for (int j = 0; j < s.length(); j++) {
+                if (s.charAt(j) == ch) {
+                    count++;
+                }
+            }    
+            if (count > 1 && s.indexOf(ch) == i) { // Ensures each duplicate is printed once
+                System.out.println(ch + " : " + count);
+            }
+        }
+    }
+}
+
+OUTPUT:
+Enter the string : Hello Kitty
+Duplicate charcters 
+l : 2
+t : 2

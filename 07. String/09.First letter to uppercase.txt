@@ -1,0 +1,32 @@
+9.Convert the first letter of each word to uppercase 
+
+CODE:
+
+import java.util.Scanner;
+public class String_Firstletter_uppercase_04 {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the String : ");
+		String s=sc.nextLine();
+		String[] k=s.split(" ");
+		String r = "";
+		for(String i:k) {
+			if (!i.isEmpty()) {
+				r += (i.charAt(0)+"").toUpperCase() + i.substring(1) + " ";
+			  //r += Character.toUpperCase(i.charAt(0)) + i.substring(1) + " ";
+			}
+		}
+		System.out.print("Converted String : "+r.trim());
+	}
+}
+
+/*
+ First word: "hello"
+word.charAt(0) + "" → 'h' + "" → "h" (converted to string)
+"h".toUpperCase() → "H"
+"H" + word.substring(1) → "H" + "ello" → "Hello"
+result = "Hello "
+ */
+OUTPUT:
+Enter the String : hello i am a java developer
+Converted String : Hello I Am A Java Developer

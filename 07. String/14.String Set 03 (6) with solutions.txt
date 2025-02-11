@@ -1,0 +1,197 @@
+String:-
+
+String is a collection of characters with primitive values(datatype value)
+
+Declaration of String:-
+1. String str = "Welcome to the class";
+2. String str = new String("Welcome to the class");
+
+Finding characters:-
+1. char[] ch =str.toCharArray();
+str - String name , toCharArray() - converting string character to array
+2. ch = str.charAt(index);
+ch = str.charAt(3);
+System.out.println(ch);
+
+--------------------------------------------------------------
+
+1. Write a program to print java from the given sentence.
+
+CODE:-
+
+import java.util.Scanner;
+public class String_01 {
+	public static void main(String[] args) {
+		// Print some words in the sentence getting from the user
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		String ch = s.substring(n,m);
+		System.out.println(ch);
+		// Print java from the given String
+		String str = "Welcome to java";
+	    // char ch = str.charAt(11);
+	    String ch1 = str.substring(11,15);
+	    System.out.println(ch1);
+	}
+}
+
+INPUT:-
+World is full of vulnerabilities
+17
+32
+
+OUTPUT:-
+vulnerabilities
+java
+
+=============================================================
+
+2. Write a program to find the total number of vowel or count the vowels and consonants from the given string
+
+CODE:-
+
+public class count_Vowels_02 {
+	public static void main(String[] args) {
+		//COUNT VOWELS
+		String s = "Apple is a healthy fruit";
+		s=s.toLowerCase();
+		int count =0;
+		int count1=0;
+		for(int i =0;i<s.length();i++) {
+			if(s.charAt(i) =='a'|| s.charAt(i) =='e'||s.charAt(i) =='i'||s.charAt(i) =='o'||s.charAt(i) =='u') {
+				//System.out.print(s.charAt(i)+" ");
+				count++;
+			}
+			else {
+				count1++;
+			}
+		}System.out.println("Number of vowels: "+count);
+		System.out.println("Number of consonants: "+count1);
+	}
+}
+
+OUTPUT:-
+
+Number of vowels: 8
+Number of consonants: 16
+
+=====================================================================================================================
+
+3. Write a program to print only consonants from the string 
+
+CODE:-
+public class count_consonants_03 {
+	public static void main(String[] args) {
+		//Print only the consonants from the sentence
+		String s = "Apple is a healthy fruit";
+		s = s.toLowerCase();
+		for(int i =0;i<s.length();i++) {
+			if(s.charAt(i)=='a'||s.charAt(i)=='e'||s.charAt(i)=='i'||s.charAt(i)=='o'||s.charAt(i)=='u') {
+				continue;
+			}
+			System.out.print(s.charAt(i));
+		}
+	}
+}
+
+OUTPUT:-
+
+ppl s  hlthy frt
+
+====================================================================================================================
+
+4. Write a program to reverse the given string
+
+CODE:
+
+METHOD 1-> 
+public class reverse_String_04 {
+	public static void main(String[] args) {
+		String s = "Students";
+		String t ="";
+		for(int i = s.length()-1;i>=0;i--) {
+			t = t + s.charAt(i);
+		}
+		System.out.print(t);
+	}
+}
+
+METHOD 2-> 
+
+public class reverse_String_04 {
+public static void main(String[] args) {
+String s = "Students";
+String t ="";
+char ch ;
+for(int i = 0;i<s.length();i++) {
+	ch = s.charAt(i);
+	t = ch + t;
+}System.out.print(t);
+}
+}
+
+OUTPUT:
+stnedutS
+
+==================================================================================================================
+
+5. Write a program to reverse the vowels in a string and print the updated string
+
+ALGORITHM:
+
+1.Traverse left to right:
+   If vowels found, follow step 2
+2.Traverse Right to left:
+   If vowel found, follow step 3
+3.Swap:
+   Swap the characters with current position(i,j) value/index - if(i<j)
+4.if(i>=j) - break
+
+
+
+=============================================================================================================
+
+6. Write a program to print the next alphabet from the given string
+
+SAMPLE INPUT:
+M A T H
+SAMPLE OUTPUT:
+N Z U G
+
+CODE:
+
+import java.util.Scanner;
+public class add_1_subtract_1_in_String_01 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		//String s = "mathz";		
+		char ch[]=s.toCharArray();
+		for( int i =0;i<s.length();i++) {
+			if(ch[i]=='a'||ch[i]=='A') {
+				ch[i]+=25;
+			}
+			else if(ch[i]=='z'||ch[i]=='Z') {
+				ch[i]-=25;
+			}
+			else {
+				if(i%2==0) {
+					ch[i]+=1;
+				}
+				else {
+					ch[i]-=1;
+				}
+			}
+			System.out.print(ch[i]);
+		}
+	}
+}
+
+OUTPUT:
+ 
+1-> math
+    nzug
+2-> chemistry
+    dgfljruqz

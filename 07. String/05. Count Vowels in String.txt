@@ -1,0 +1,25 @@
+5.Write a program to Count the Vowels in the String from the given string?
+
+CODE:
+
+import java.util.Scanner;
+public class String_CountVowels_05 {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the String : ");
+		String s=sc.nextLine();
+	    String k= s.toLowerCase();
+		int vowels=0;
+		for(int i=0;i<k.length();i++) {
+			if(k.charAt(i)=='a'||k.charAt(i)=='e'||k.charAt(i)=='i'||k.charAt(i)=='o'||k.charAt(i)=='u') {
+				vowels++;
+			}
+		}
+		System.out.print("Total Vowels in the string : "+vowels);
+	}
+}
+
+OUTPUT:
+Enter the String : What are you doing
+Total Vowels in the string : 7
+
