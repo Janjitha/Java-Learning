@@ -1,0 +1,79 @@
+4. Write a program for the following array, if a person has 3 different fruits of 30kg,15kg,20kg and cost price of these are Rs.5/kg,Rs.3/kg,Rs.6/kg respectively. If person selling these fruits as Rs.6/kg,Rs.4/kg,Rs.5/kg respectively. Then calculate total profit or loss.
+
+CODE:
+
+METHOD 1 ->
+import java.util.Scanner;
+public class profit_loss_array_04 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int kilo[] = new int[n];
+		int cost[] = new int[n];
+		int sell[] = new int[n];
+		for(int i = 0;i<n;i++) {
+			kilo[i]=sc.nextInt();
+		}
+		for(int i = 0;i<n;i++) {
+			cost[i]=sc.nextInt();
+		}
+		for(int i = 0;i<n;i++) {
+			sell[i]=sc.nextInt();
+		}
+		int sum=0;
+		int sum2=0;
+		int prod[]=new int[n];
+		int prod1[]=new int[n];
+		for(int i = 0;i<n;i++) {
+			 prod[i]=kilo[i]*cost[i];
+			 prod1[i]=kilo[i]*sell[i];
+			sum=sum+prod[i];
+			sum2=sum2+prod1[i];
+		}
+		if(sum>sum2) {
+			int s = sum-sum2;
+			System.out.println("Loss "+s);
+		}else {
+			int s = sum2-sum;
+			System.out.println("Profit "+s);
+		}
+	}
+}
+-------------------------------------
+METHOD 2 ->
+import java.util.Scanner;
+public class profit_loss_array_04 {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+int a[]= {30,15,20};
+int b[]= {5,3,6};
+int c[]= {6,4,5};
+int c1[]=new int[a.length];
+int s1[]=new int[a.length];
+int c2=0;
+int s2=0;
+for(int i=0;i<a.length;i++) {
+	c1[i]=a[i]*b[i];
+	s1[i]=a[i]*c[i];
+	c2=c2+c1[i];
+	s2=s2+s1[i];
+}
+int t=s2-c2;
+System.out.println(t);
+if(t<0) {
+	System.out.println("loss");	
+}
+else {
+	System.out.println("profit");
+     }
+   }
+}
+
+INPUT:
+3
+30 15 20
+5 3 6 
+6 4 5
+
+OUTPUT:
+Profit 25
