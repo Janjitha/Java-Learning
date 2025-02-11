@@ -1,0 +1,46 @@
+4. Write a program to delete an element in the given array at given position.
+
+CODE:
+
+import java.util.Scanner;
+public class Array_Delete_02 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Size:");
+		int n = sc.nextInt();
+		int a[] = new int[n];
+		System.out.println("Enter the elements:");
+		for(int i =0;i<n;i++) {	
+			a[i]=sc.nextInt();
+		}
+		System.out.println("Enter the Position:");
+		int pos=sc.nextInt();
+		int i;
+		if(pos>n) {
+			System.out.println("Invalid");
+		}
+		else {
+			i=0;
+			while(i<n) {
+				if(i!=pos-1){
+					System.out.print(a[i]+" ");
+				} 
+			//for(int i=0;i<n;i++){
+			//	if(i==pos-1) {
+			//		continue;	}
+			//	else {
+			//		System.out.println(a[i]+" ");
+			i++;
+			}
+		}	
+	}
+}
+
+OUTPUT:
+Enter the Size:
+5
+Enter the elements:
+1 2 3 4 5
+Enter the Position:
+2
+1 3 4 5 
