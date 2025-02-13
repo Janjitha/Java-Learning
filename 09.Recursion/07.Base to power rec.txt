@@ -1,0 +1,38 @@
+7. Write a program to find the output from the given base value and power value?
+
+CODE:
+
+public class power_value_07 {
+	static int power(int b,int p) {
+		//return (int) Math.pow(b,p);
+		if(p==0) {
+			return 1;
+			}
+		return b*power(b,p-1);
+	}
+	public static void main(String[] args) {
+		int b = 2;
+		int p = 3;
+		System.out.println(power(b,p));
+	}
+}
+
+OUTPUT:
+8
+
+RECURSIVE BREAKDOWN:
+
+   Recursive Execution - (power(2, 3))
+   -power(2, 3)
+    Calls 2 * power(2, 2)
+   -power(2, 2)
+    Calls 2 * power(2, 1)
+   -power(2, 1)
+    Calls 2 * power(2, 0)
+   -power(2, 0)
+    Base case → returns 1
+
+   Now, results propagate back:
+    power(2, 1) = 2 * 1 = 2
+    power(2, 2) = 2 * 2 = 4
+    power(2, 3) = 2 * 4 = 8

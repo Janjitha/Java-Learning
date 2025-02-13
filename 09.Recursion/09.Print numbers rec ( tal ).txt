@@ -1,0 +1,29 @@
+9. Write a program to print the numbers using recursion?
+
+CODE:
+
+import java.util.Scanner;
+
+public class PrintNumbers {
+    public static void printNumbers(int n) {
+        if (n == 0) {
+            return;
+        }
+        printNumbers(n - 1); // Recursive call with n-1
+        System.out.print(n + " "); // Print after recursion to maintain order
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = scanner.nextInt();
+        scanner.close();
+        
+        printNumbers(n);
+    }
+}
+
+
+OUTPUT:
+Enter a number: 10
+1 2 3 4 5 6 7 8 9 10 

@@ -1,0 +1,22 @@
+6. Write a program to reverse the integer using recursion?
+
+CODE:
+
+public class reverse_integer_06 {
+	static int reverse(int n,int rev) {
+		if(n==0) {
+			return rev;
+		}
+		rev = rev*10+(n%10);
+		return reverse(n/10,rev);
+	}
+	public static void main(String[] args) {
+		int n = 1234;
+		int rev=0;
+		System.out.println(reverse(n,rev));
+	}
+}
+
+
+OUTPUT:
+4321

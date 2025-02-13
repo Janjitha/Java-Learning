@@ -1,0 +1,41 @@
+8. Write a program to count the total numbers of numbers in the given integer?
+
+CODE:
+
+//using recursion
+public class count_integer_08 {
+	static int count(int n) {
+		if(n==0) {
+			return n;
+		}
+		return 1+count(n/10);
+	}
+	public static void main(String[] args) {
+		int n = 12345;
+		System.out.println("Count of the integer is : "+ count(n));
+	}
+}
+/*
+	public static void main(String[] args) {
+		int n = 456252;
+		String s =n+"";
+		System.out.println("Using String length : "+ s.length());
+		char ch[] = s.toCharArray();
+		System.out.println("Using CharArray : "+ch.length);
+		int count=0;
+		while(n!=0) {
+			n/=10;
+			count++;
+		}
+		System.out.println("Using while loop : "+count);
+	}
+}
+*/
+
+OUTPUT:
+6
+
+COMMENTED OUTPUT:
+Using String length : 6
+Using CharArray : 6
+Using while loop : 6

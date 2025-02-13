@@ -1,0 +1,33 @@
+13. Write a program to convert the integer to binary using recursion?
+
+CODE:
+
+public class integer_to_binary_13 {
+	static String bin(int n,String b) {
+		if(n==0) {
+		return b;
+	}
+	b=n%2+b;
+	return bin(n/2,b);
+	}
+
+	public static void main(String[] args) {
+		int n = 25;
+		String b = "";
+		System.out.println(bin(n,b));
+	}
+}
+
+
+OUTPUT:
+11001
+
+RECURSION BREAKDOWN:
+
+25	1	"1"	bin(12, "1")
+12	0	"01"	bin(6, "01")
+6	0	"001"	bin(3, "001")
+3	1	"1001"	bin(1, "1001")
+1	1	"11001"	bin(0, "11001")
+0(Base)-	"11001"	Return Result
+
