@@ -1,0 +1,50 @@
+13. Write a program to print the sum of columns in the matrix ?
+
+CONDITION:-
+
+ 1 2 3 4 -> 4
+ 1 2 3 4 -> 8
+ 1 2 3 4 -> 12
+ 1 2 3 4 -> 16
+
+CODE:
+
+import java.util.Scanner;
+public class Add_col_value_in_2D {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the rows:");
+        int r = sc.nextInt();
+        System.out.println("Enter the columns:");
+        int c = sc.nextInt();
+        int a[][]= new int[r][c];
+        System.out.println("Enter Values:");
+        for(int i=0;i<r;i++) {
+        	for(int j=0;j<c;j++) {
+        		a[i][j]=sc.nextInt();
+        	}
+        }
+        int sum=0;
+        for(int i=0;i<c;i++) {
+        	for(int j=0 ;j<r;j++) {
+        		sum=sum+a[j][i];	
+        	}
+        	System.out.println("The sum : "+sum);
+        	sum=0;
+        }
+	}
+}
+
+OUTPUT:
+Enter the rows:
+3
+Enter the columns:
+4
+Enter Values:
+1 2 3 4
+1 2 3 4
+1 2 3 4
+The sum : 3
+The sum : 6
+The sum : 9
+The sum : 12
