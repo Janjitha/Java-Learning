@@ -1,12 +1,23 @@
-public class Solution {
+class Solution {
     public int lengthOfLastWord(String s) {
-        if (s == null || s.length() == 0) {
-            return 0;
+       String str = s.trim();
+       int count=0;
+       char ch[]=str.toCharArray();
+       for(int i=ch.length-1;i>=0;i--){
+        if(ch[i]!=' '){
+            count++;
         }
-        String[] strs = s.split(" ");
-        if (strs.length == 0) {
-            return 0;
+        else{
+            break;
         }
-        return strs[strs.length - 1].length();
+       }return count;
+    }
+}
+====================================================================================
+class Solution {
+    public int lengthOfLastWord(String s) {
+        String[] a=s.split(" ");
+        String len = a[a.length-1];
+        return len.length();
     }
 }
