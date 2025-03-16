@@ -1,31 +1,53 @@
 class Solution {
     public String reverseVowels(String s) {
-        if(s.length()==1) return s;
-        List<Integer> list = new ArrayList<>();
-        for(int i = 0;i<s.length();i++){
-            if(s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt(i) == 'i' ||s.charAt(i) == 'o' ||s.charAt(i) == 'u' ||
-              s.charAt(i) == 'A' || s.charAt(i) == 'E' || s.charAt(i) == 'I' ||s.charAt(i) == 'O' ||s.charAt(i) == 'U'){
-                list.add(i);
+        char[] arr = s.toCharArray();
+        String vowels = "aeiouAEIOU";
+        int i = 0, j = arr.length - 1;
+
+        while (i < j) {
+            // Move i forward until a vowel is found
+            while (i < j && vowels.indexOf(arr[i]) == -1) {
+                i++;
+            }
+            // Move j backward until a vowel is found
+            while (i < j && vowels.indexOf(arr[j]) == -1) {
+                j--;
+            }
+            // Swap the vowels
+            if (i < j) {
+                char temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                i++;
+                j--;
             }
         }
-        if(list.size()<=1) return s;
-        Collections.reverse(list);
-        StringBuilder sb = new StringBuilder();
-        int index = 0;
-        int low = list.get(index);
-        int high = list.get(list.size()-1);
-        for(int i = 0;i<s.length();i++){
-            if(index!=list.size()){
-                low = list.get(index);
-                high = list.get(list.size()-1-index);
-            }
-            if(i!= high){
-                sb.append(s.charAt(i));
-            }else{
-                sb.append(s.charAt(low));
-                index++;
-            }
-        }
-        return sb.toString();
+        return new String(arr);
     }
 }
+
+/*
+class Solution {
+//not efficient code
+    public String reverseVowels(String s) {
+        String vowels = "aeiouAEIOU";
+        String k = "";
+        String v = "";
+        for (int i = 0; i < s.length(); i++) {
+            if (vowels.indexOf(s.charAt(i)) != -1) {
+                v = s.charAt(i) + v; 
+            }
+        }
+        int index = 0; 
+        for (int i = 0; i < s.length(); i++) {
+            if (vowels.indexOf(s.charAt(i)) != -1) {
+                k += v.charAt(index); 
+                index++;
+            } else {
+                k += s.charAt(i); 
+            }
+        }
+        return k;
+    }
+}
+ */
