@@ -1,17 +1,14 @@
 class Solution {
     public int maxProductDifference(int[] nums) {
-        
-        
-        //Solution 1
-        
-        // int diff=0;
-        // int n=nums.length;
-        // Arrays.sort(nums);
-        // diff=(nums[n-1]*nums[n-2]) - (nums[0]*nums[1]);
-        // return diff;
-        
-        //Solution 2
-        
+       Arrays.sort(nums);
+       int n=nums.length;
+       return nums[n-1]*nums[n-2]-nums[0]*nums[1]; 
+    }
+}
+
+/*
+class Solution {
+    public int maxProductDifference(int[] nums) {
         int n=nums.length;
         int maxi1=Integer.MIN_VALUE;
         int mini1=Integer.MAX_VALUE;
@@ -36,4 +33,4 @@ class Solution {
         return ((maxi1*maxi2) - (mini1*mini2));
     }
 }
-
+*/
