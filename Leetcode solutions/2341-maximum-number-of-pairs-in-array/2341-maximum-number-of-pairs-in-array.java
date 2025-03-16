@@ -1,14 +1,17 @@
 class Solution {
     public int[] numberOfPairs(int[] nums) {
-        int f[]=new int[101];
-        int a[]=new int[2];
-        for(int i=0;i<nums.length;i++){
-            f[nums[i]]++;
+        int count = 0;
+        int s = 0;
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == nums[i + 1]) {
+                count++;
+                i++;
+            } else {
+                s++;
+            }
         }
-        for(int i=0;i<101;i++){
-            a[0]+=(f[i]/2);
-            a[1]+=(f[i]%2);
-        }
-        return a;
+        s = nums.length - (count * 2);
+        return new int[]{count, s};
     }
 }
