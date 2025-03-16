@@ -1,15 +1,13 @@
 class Solution {
     public boolean canAliceWin(int[] nums) {
-        int lessthanten = 0, greaterthanten = 0;
-
-        for(int i : nums){
-            if (i > 9){
-                greaterthanten += i;
-            }
-            else{
-                lessthanten += i;
+        int sumSmall = 0, sumLarge = 0;
+        for (int x : nums) {
+            if (x < 10) {
+                sumSmall += x;
+            } else {
+                sumLarge += x;
             }
         }
-    return lessthanten == greaterthanten ? false : true; 
+        return sumSmall != sumLarge; 
     }
 }
