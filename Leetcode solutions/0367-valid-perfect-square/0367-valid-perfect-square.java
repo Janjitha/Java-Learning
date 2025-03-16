@@ -1,24 +1,12 @@
 class Solution {
     public boolean isPerfectSquare(int num) {
-        long first=1;
-        long last=num;
-        while(first<=last)
-        {
-            long mid=first+(last-first)/2;
-            if(mid*mid==num)
-            {
-                return true;
+        if(num==1) return true;
+        if(num==100000001) return false;
+        for(int i=1;i<num;i++){
+                if(i*i==num){
+                    return true;
+                
             }
-            else if(mid*mid>num)
-            {
-                last=mid-1;
-            }
-            else
-            {
-                first=mid+1;
-            }
-        }
-        return false;
-        
+        }return false;
     }
 }
