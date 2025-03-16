@@ -1,27 +1,24 @@
 class Solution {
-    public long makeIntegerBeautiful(long n, int target) {
-        // code here
-        long ans = 0;
-        long power = 1;
-
-        // e.g. n = 123. After tunning off the last bit by adding 7, n = 130.
-        // Effectively, we can think n as 13. That's why we do n = (n / 10) + 1.
-        while (sum(n) > target) {
-            // the cost to turn off the last digit
-            ans += power * (10 - n % 10);
-            n = n / 10 + 1;
-            power *= 10;
+    public int alternateDigitSum(int n) {
+        int len=String.valueOf(n).length();
+        int arr[] = new int[len];
+        int j = len-1;
+		while(n>0){
+			int rem = n%10;
+			arr[j--] = rem;
+			n = n/10;
+		}
+        int even = 0;
+        int odd = 0;
+        int c = 0;
+		for (int i = 0; i < len; i++) {
+			if(c%2!=0){
+				odd += arr[i];
+			}else{
+				even+=arr[i];
+			}
+            c++;
+		}
+        return even - odd;
         }
-
-        return ans;
-    }
-
-    private int sum(long n) {
-        int res = 0;
-        while (n > 0) {
-            res += n % 10;
-            n /= 10;
-        }
-        return res;
-    }
 }
