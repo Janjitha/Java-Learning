@@ -1,5 +1,17 @@
 class Solution {
     public int mostWordsFound(String[] sentences) {
+        int max = 0;
+        for(String s : sentences){
+            int count = s.split(" ").length;
+            max = Math.max(count,max);
+        }
+        return max;   
+    }
+}
+
+/*
+class Solution {
+    public int mostWordsFound(String[] sentences) {
         int maxCount = Integer.MIN_VALUE;
         for(String sentence : sentences){
             int count = 1;
@@ -13,3 +25,4 @@ class Solution {
         return maxCount;
     }
 }
+*/
