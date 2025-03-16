@@ -1,10 +1,12 @@
 class Solution {
     public boolean rotateString(String s, String goal) {
-        int N = s.length();
-        if (N != goal.length()) {
+        if(s.length()!=goal.length()){
             return false;
         }
-        String concatenated = s + s;
-        return concatenated.contains(goal);
+        String k = s+s;
+        if(k.contains(goal)){
+            return true;
+        }
+        return false;
     }
 }
