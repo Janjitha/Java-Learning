@@ -1,11 +1,14 @@
 class Solution {
     public boolean isBalanced(String num) {
-        int l=0;
-        int r=0;
+        int s1=0,s2=0;
         for(int i=0;i<num.length();i++){
-         if(i%2==0) l+=num.charAt(i)-'0';
-        else   r+=num.charAt(i)-'0';
-        }
-        return l==r;
+            int d = num.charAt(i)-'0';
+            if(i%2==0){
+                s1+=d;
+            }else{
+                s2+=d;
+            }
+        }//System.out.print(s1+" "+s2);
+        return s1==s2;
     }
 }
