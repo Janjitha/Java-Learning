@@ -1,28 +1,16 @@
-class Solution 
-{
-    public String findValidPair(String s) 
-    {
-        HashMap<Character, Integer> freqMap = new HashMap<>();
-
-        // Count frequency of each digit
-        for (char c : s.toCharArray()) 
-        {
-            freqMap.put(c, freqMap.getOrDefault(c, 0) + 1);
+class Solution {
+    public String findValidPair(String s) {
+        int[] count = new int[10];
+        for (char c : s.toCharArray()) {
+            count[c - '0']++;
         }
-
-        // Traverse and find the first valid adjacent pair
-        for (int i = 0; i < s.length() - 1; i++) 
-        {
-            char first = s.charAt(i);
-            char second = s.charAt(i + 1);
-
-            if (first != second && 
-                freqMap.get(first) == first - '0' && 
-                freqMap.get(second) == second - '0') {
-                return "" + first + second; // Found a valid pair
+        for (int i = 0; i < s.length() - 1; i++) {
+            int a = s.charAt(i) - '0';
+            int b = s.charAt(i + 1) - '0';
+            if (a != b && count[a] == a && count[b] == b) {
+                return s.substring(i, i + 2);
             }
         }
-
-        return ""; // No valid pair found
+        return "";
     }
 }
