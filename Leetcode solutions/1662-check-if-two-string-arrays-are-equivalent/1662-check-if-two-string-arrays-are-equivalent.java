@@ -1,23 +1,29 @@
 class Solution {
     public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
-        int index1      = 0;
-        int subIndex1   = 0;
-        int index2      = 0;
-        int subIndex2   = 0;
-        while(index1!= word1.length && index2!=word2.length){
-            if(word1[index1].charAt(subIndex1++) != word2[index2].charAt(subIndex2++)){
-                return false;
-            }
-            if(subIndex1 == word1[index1].length()){
-                subIndex1 = 0;
-                index1++;
-            }
-            if(subIndex2 == word2[index2].length()){
-                subIndex2 = 0;
-                index2++;
-            }
+        StringBuilder a = new StringBuilder();
+        StringBuilder b = new StringBuilder();
+        for(String s : word1 ){
+            a.append(s);
         }
-        return index1==word1.length && index2==word2.length;
-        
+        for(String t : word2 ){
+            b.append(t);
+        }return a.toString().equals(b.toString());
     }
 }
+
+/*
+class Solution {
+    public boolean arrayStringsAreEqual(String[] word1, String[] word2) {
+        String a = "";
+        String b = "";
+        for(int i=0;i<word1.length;i++){
+            a+=word1[i];
+        }
+        for(int i=0;i<word2.length;i++){
+            b+=word2[i];
+        }System.out.print(a+" "+b);
+        
+        return b.equals(a);
+    }
+}
+*/
