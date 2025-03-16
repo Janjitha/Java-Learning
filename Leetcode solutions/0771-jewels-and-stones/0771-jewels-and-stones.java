@@ -1,14 +1,12 @@
 class Solution {
     public int numJewelsInStones(String jewels, String stones) {
-        List<Character>al =new ArrayList<>();
-        int count=0;
-    for(char jewel :jewels.toCharArray()){
-        al.add(jewel);
-        
-    }
-        for(char stone:stones.toCharArray()){
-            if(al.contains(stone)){
-                count++;
+        int count = 0;
+        for(int i =0;i<jewels.length();i++){
+            for(int j =0;j<stones.length();j++){
+                //if(jewels.contains(Character.toString(stones.charAt(i)))){
+                if(jewels.charAt(i)==stones.charAt(j)){
+                    count++;
+                }
             }
         }
         return count;
