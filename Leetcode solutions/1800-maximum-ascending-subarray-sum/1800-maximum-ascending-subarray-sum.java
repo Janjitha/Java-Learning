@@ -1,5 +1,22 @@
 class Solution {
     public int maxAscendingSum(int[] nums) {
+        int s=0;
+        int a=0;
+        for(int i=0;i<nums.length;i++){
+            if(i==0 || nums[i]>nums[i-1]){
+                s+=nums[i];
+                a=Math.max(a,s);
+            }else{
+                s=nums[i];
+            }
+        }
+        return a;
+    }
+}
+
+/*
+class Solution {
+    public int maxAscendingSum(int[] nums) {
         int maxSum = 0, currSum = nums[0];
         int n = nums.length;
 
@@ -14,3 +31,4 @@ class Solution {
         return Math.max(currSum, maxSum);
     }
 }
+*/
