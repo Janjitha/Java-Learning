@@ -15,6 +15,55 @@ SAMPLE OUTPUT:
 
 CODE:
 
+public class binary_search_painter {
+	public static boolean isPoss(int[] c,int a,int mid) {
+		int n=c.length;
+		int sum=0;
+		int painter=1;
+		for(int i=0;i<n;i++) {
+			sum+=c[i];
+			if(sum<=mid) {
+				continue;
+			}else {
+				painter++;
+				if(painter>a) {
+					return false;
+				}
+				sum = c[i];
+			}
+		}
+		return true;
+	}
+	public static int time(int c[],int a,int b)  {
+		int n=c.length;
+		int res=0;
+		int l=0, h=0;
+		for(int i=0;i<n;i++) {
+			h+=c[i];
+		}
+		int ans=0;
+		while(l<=h) {
+			int mid = (l+h)/2;
+			if(isPoss(c,a,mid)==true) {
+				res=mid;
+				h=mid-1;
+			}else {
+				l=mid+1;
+			}
+		}
+		return (res*b);
+	}
+	
+
+	public static void main(String[] args) {
+		 int a = 2; // No of painters
+	        int b = 1; // Time per unit length
+	        int[] c = {10, 20, 30, 40}; // Board lengths
+	        System.out.println(time(c,a,b));
+	}
+}
+
+/*
 package practise_java;
 public class binary_search_painter {
 	public static void main(String[] args) {
@@ -62,7 +111,7 @@ public class binary_search_painter {
 		        System.out.println("Minimum time required: " + result);
 		    }
 		}
-
+*/
 
 
 
