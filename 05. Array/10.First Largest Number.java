@@ -14,3 +14,6 @@ public class Main
     System.out.print(max); 
   }
 }
+
+OUTPUT:
+34
