@@ -1,5 +1,21 @@
 class Solution {
     public int[] countBits(int n) {
+        int k[] = new int[n+1];
+        for(int i=0;i<=n;i++){
+            int num = i;
+            int c =0;
+            while(num>0){
+                num=num&(num-1);
+                c++;
+            }   
+            k[i]=c;
+        }return k;
+    }
+}
+--------------------------------------------
+/*
+class Solution {
+    public int[] countBits(int n) {
         int a[] = new int[n + 1];   
         for (int i = 1; i <= n; i++) {
             a[i] = a[i / 2] + (i % 2); 
@@ -7,7 +23,8 @@ class Solution {
         return a;
     }
 }
-
+*/
+------------------------------------------------
 /*
 int[] a = new int[n + 1];
         for (int i = 0; i <= n; i++) {
@@ -17,7 +34,7 @@ int[] a = new int[n + 1];
     }
 }
 */
-
+---------------------------------------------
 /*
 int a[] = new int[n + 1];   
         for (int i = 0; i <= n; i++) { 
