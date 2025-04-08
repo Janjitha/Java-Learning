@@ -1,3 +1,13 @@
+import java.math.BigInteger;
+class Solution {
+    public String addBinary(String a, String b) {
+        BigInteger x = new BigInteger(a,2);
+        BigInteger y = new BigInteger(b,2);
+        BigInteger r = x.add(y);
+        return r.toString(2);
+    }
+}
+/*
 class Solution {
     public String addBinary(String a, String b) {
         int n1 = a.length()-1;
@@ -27,3 +37,4 @@ class Solution {
         return sb.reverse().toString();
     }
 }
+*/
