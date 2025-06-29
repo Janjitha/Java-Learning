@@ -1,0 +1,171 @@
+
+📘 Java HashMap Practice: Basic to Advanced
+==========================================
+
+------------------------------------------------------------
+🟢 Program 1: Count Frequency of Integers
+------------------------------------------------------------
+🔸 Problem:
+Given an array, count how many times each number appears.
+
+🔸 Input:
+arr = [1, 2, 2, 3, 1, 4]
+
+🔸 Expected Output:
+1 : 2
+2 : 2
+3 : 1
+4 : 1
+
+🔸 Code:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 2, 3, 1, 4};
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int x : arr) {
+            map.put(x, map.getOrDefault(x, 0) + 1);
+        }
+        for (int key : map.keySet()) {
+            System.out.println(key + " : " + map.get(key));
+        }
+    }
+}
+
+🔸 Explanation:
+Loop through each number. If it's already in the map, increase count. Otherwise, start with 0 and add 1.
+
+
+------------------------------------------------------------
+🟢 Program 2: Count Frequency of Words (Strings)
+------------------------------------------------------------
+🔸 Input:
+["apple", "banana", "apple", "orange", "banana", "apple"]
+
+🔸 Expected Output:
+apple : 3
+banana : 2
+orange : 1
+
+🔸 Code:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        String[] words = {"apple", "banana", "apple", "orange", "banana", "apple"};
+        HashMap<String, Integer> map = new HashMap<>();
+        for (String word : words) {
+            map.put(word, map.getOrDefault(word, 0) + 1);
+        }
+        for (String key : map.keySet()) {
+            System.out.println(key + " : " + map.get(key));
+        }
+    }
+}
+
+
+------------------------------------------------------------
+🟢 Program 3: Find First Non-Repeating Element
+------------------------------------------------------------
+🔸 Input:
+arr = [4, 5, 1, 2, 0, 4]
+
+🔸 Expected Output:
+5
+
+🔸 Code:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {4, 5, 1, 2, 0, 4};
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int x : arr) {
+            map.put(x, map.getOrDefault(x, 0) + 1);
+        }
+        for (int x : arr) {
+            if (map.get(x) == 1) {
+                System.out.println(x);
+                break;
+            }
+        }
+    }
+}
+
+🔸 Explanation:
+First store all frequencies, then loop again to find the first element that has count = 1.
+
+
+------------------------------------------------------------
+🟢 Program 4: Check if Two Strings are Anagrams
+------------------------------------------------------------
+🔸 Input:
+s1 = "listen", s2 = "silent"
+
+🔸 Expected Output:
+true
+
+🔸 Code:
+import java.util.*;
+public class Main {
+    public static boolean isAnagram(String s1, String s2) {
+        if (s1.length() != s2.length()) return false;
+
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (char c : s1.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+        for (char c : s2.toCharArray()) {
+            if (!map.containsKey(c)) return false;
+            map.put(c, map.get(c) - 1);
+            if (map.get(c) == 0) map.remove(c);
+        }
+        return map.isEmpty();
+    }
+
+    public static void main(String[] args) {
+        String s1 = "listen", s2 = "silent";
+        System.out.println(isAnagram(s1, s2));
+    }
+}
+
+🔸 Explanation:
+Both strings must have same count for each character.
+
+
+------------------------------------------------------------
+🟢 Program 5: Group Anagrams
+------------------------------------------------------------
+🔸 Input:
+["eat", "tea", "tan", "ate", "nat", "bat"]
+
+🔸 Output:
+[[eat, tea, ate], [tan, nat], [bat]]
+
+🔸 Code:
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        String[] words = {"eat", "tea", "tan", "ate", "nat", "bat"};
+        HashMap<String, List<String>> map = new HashMap<>();
+
+        for (String word : words) {
+            char[] arr = word.toCharArray();
+            Arrays.sort(arr);
+            String sorted = new String(arr);
+            if (!map.containsKey(sorted)) {
+                map.put(sorted, new ArrayList<>());
+            }
+            map.get(sorted).add(word);
+        }
+
+        for (List<String> group : map.values()) {
+            System.out.println(group);
+        }
+    }
+}
+
+🔸 Explanation:
+Use the sorted string as key. Group words by their sorted version.
+
+============================================================
+
+End of HashMap Practice Set
