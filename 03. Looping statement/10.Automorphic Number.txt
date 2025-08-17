@@ -27,3 +27,34 @@ public class Automorphic_10 {
 	}
 
 }
+
+==============================================================
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt(); //  25         
+		int temp=n;
+		int square=n*n;        // 625 
+		boolean flag=false;
+		
+		while(n!=0){
+		    int n_lastdigit = n%10;//5
+		    int square_lastdigit=square%10;//5
+		    if(n_lastdigit==square_lastdigit){
+		        flag=true;
+		        n/=10;
+		    }else{
+		        break;
+		    }
+		}
+		if(flag){
+		    System.out.println("Automorphic num");
+		}else{
+		    System.out.println("Nope");
+		}
+		
+	}
+}
