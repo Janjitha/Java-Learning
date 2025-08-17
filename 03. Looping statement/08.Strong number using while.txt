@@ -36,7 +36,39 @@ public class Strongnumber_08 {
 
 }
 
+===================================================================
+
+import java.util.*;
+class Main{
+public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int temp=n;
+    int fact=1;
+    int sum=0;
+    while(n!=0){
+        fact=1;
+        
+        int last = n%10;
+        for(int i=1;i<=last;i++){
+            fact=fact*i;
+            
+        }
+        sum+=fact;
+        n/=10;
+        
+    }
+    
+    if(temp==sum){
+        System.out.println("Strong Num");
+    }else{
+        System.out.println("Nope");
+    }
+}
+}
+
 OUTPUT FOR THE CODE:
 Enter the number:
 145
 145 is Strong
+
