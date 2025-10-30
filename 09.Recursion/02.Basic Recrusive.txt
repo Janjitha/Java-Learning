@@ -1,0 +1,13 @@
+import java.util.*;
+class Main {
+    public static void num(int a,int n){
+        if(a>n){
+            return;
+        }
+        System.out.println(a);
+        num(a+1,n);
+    }
+    public static void main(String[] args) {
+        num(1,5);
+    }
+}
