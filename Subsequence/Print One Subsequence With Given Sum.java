@@ -2,41 +2,34 @@ import java.util.*;
 
 public class Main {
 
-    static boolean printS(
-            int index,
-            List<Integer> ds,
-            int s,
-            int sum,
-            int[] arr,
-            int n
-    ) {
+    static boolean printS(int index, List<Integer> ds, int s, int target, int[] arr) {
 
         // Base case
-        if (index == n) {
-            if (s == sum) {
-                for (int num : ds) {
-                    System.out.print(num + " ");
+        if (index == arr.length) {
+            if (s == target) {
+                for (int x : ds) {
+                    System.out.print(x + " ");
                 }
                 System.out.println();
-                return true;
+                return true;   // FOUND
             }
-            return false;
+            return false;      // NOT FOUND
         }
 
-        // PICK the element
+        // PICK
         ds.add(arr[index]);
         s += arr[index];
 
-        if (printS(index + 1, ds, s, sum, arr, n) == true) {
-            return true;
+        if (printS(index + 1, ds, s, target, arr)) {
+            return true;       // STOP recursion
         }
 
         // BACKTRACK
         s -= arr[index];
         ds.remove(ds.size() - 1);
 
-        // NOT PICK the element
-        if (printS(index + 1, ds, s, sum, arr, n) == true) {
+        // NOT PICK
+        if (printS(index + 1, ds, s, target, arr)) {
             return true;
         }
 
@@ -46,12 +39,9 @@ public class Main {
     public static void main(String[] args) {
 
         int[] arr = {1, 2, 1};
-        int n = arr.length;
-        int sum = 2;
+        int target = 2;
 
-        List<Integer> ds = new ArrayList<>();
-
-        printS(0, ds, 0, sum, arr, n);
+        printS(0, new ArrayList<>(), 0, target, arr);
     }
 }
 
