@@ -11,4 +11,5 @@ class Main {
         Arrays.fill(dp,-1);
         System.out.print(fun(n,dp));
     }
+
 }
