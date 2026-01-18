@@ -1,4 +1,5 @@
 1: ACTIVITY SELECTION
+/***
 Problem:
 
 You have activities with start and end times.
@@ -42,6 +43,7 @@ Any activity ending later blocks future ones
 Earliest finish is always a safe choice
 
 That’s why this greedy is correct.
+***/
 ================================================================
 import java.util.*;
 class Activity{
@@ -76,3 +78,4 @@ class Main {
     }
 
 }
+
